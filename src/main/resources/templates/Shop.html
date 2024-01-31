@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Первая страница</title>
+</head>
+
+<body>
+<div>
+    <input id="userInput">
+</div>
+<div>
+    <button onclick="readText()">
+        Кнопка для вывода сообщения
+    </button>
+</div>
+<div name="textArea">
+
+</div>
+
+</body>
+</html>
+
+<script>
+    function readText() {
+        let userInputValue=document.getElementById("userInput").value
+
+        if (userInputValue!=""){
+            let newElem=document.createElement("p")
+            newElem.innerHTML=userInputValue
+            newElem.style.color="red"
+            newElem.style.marginTop="50px"
+
+            document.getElementsByName("textArea")[0].append(newElem)
+        }
+    }
+</script>
